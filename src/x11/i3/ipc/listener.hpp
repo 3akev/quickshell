@@ -24,6 +24,15 @@
 namespace qs::i3::ipc {
 
 ///! I3/Sway IPC event listener
+/// #### Example
+/// ```qml
+/// I3IpcListener {
+///   subscriptions: ["input"]
+///   onIpcEvent: function (event) {
+///     handleInputEvent(event.data)
+///   }
+/// }
+/// ```
 class I3IpcListener: public PostReloadHook {
 	Q_OBJECT;
 	// clang-format off
